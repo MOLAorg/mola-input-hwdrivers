@@ -1,3 +1,5 @@
+.. _mola-input-hwdrivers:
+
 ================================
 Module: mola-input-hwdrivers
 ================================

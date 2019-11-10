@@ -24,7 +24,7 @@
 
 using namespace mola;
 
-IMPLEMENTS_MRPT_OBJECT_NS_PREFIX(GenericSensor, RawDataSourceBase, mola);
+IMPLEMENTS_MRPT_OBJECT(GenericSensor, RawDataSourceBase, mola)
 
 MRPT_INITIALIZER(do_register_GenericSensor)
 {

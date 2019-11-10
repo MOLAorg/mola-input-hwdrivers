@@ -21,7 +21,7 @@ namespace mola
  * \ingroup mola_input_hwdrivers_grp */
 class GenericSensor : public RawDataSourceBase
 {
-    DEFINE_MRPT_OBJECT(GenericSensor)
+    DEFINE_MRPT_OBJECT(GenericSensor, mola)
 
    public:
     GenericSensor();

@@ -20,7 +20,7 @@
 #include <mola-kernel/yaml_helpers.h>
 #include <mrpt/config/CConfigFileMemory.h>
 #include <mrpt/core/initializer.h>
-#include <yaml-cpp/yaml.h>
+#include <mrpt/containers/yaml.h>
 
 using namespace mola;
 
@@ -41,7 +41,7 @@ void GenericSensor::initialize(const std::string& cfg_block)
     MRPT_START ProfilerEntry tle(profiler_, "initialize");
 
     // Mandatory parameters:
-    auto c = YAML::Load(cfg_block);
+    auto c = mrpt::containers::yaml::FromText(cfg_block);
 
     ENSURE_YAML_ENTRY_EXISTS(c, "params");
     auto cfg = c["params"];

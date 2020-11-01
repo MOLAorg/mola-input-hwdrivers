@@ -32,4 +32,7 @@ mola_add_library(
 	PRIVATE_LINK_LIBRARIES
 		mola-kernel
 		mrpt::hwdrivers
+	CMAKE_DEPENDENCIES
+		mola-kernel
+		mrpt-hwdrivers
 )

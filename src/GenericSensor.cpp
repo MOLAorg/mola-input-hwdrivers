@@ -17,7 +17,7 @@
  */
 
 #include <mola-input-hwdrivers/GenericSensor.h>
-#include <mola-kernel/yaml_helpers.h>
+#include <mola-yaml/yaml_helpers.h>
 #include <mrpt/config/CConfigFileMemory.h>
 #include <mrpt/core/initializer.h>
 #include <mrpt/containers/yaml.h>

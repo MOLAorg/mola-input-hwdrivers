@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------------------
  *   A Modular Optimization framework for Localization and mApping  (MOLA)
- * Copyright (C) 2018-2019 Jose Luis Blanco, University of Almeria
+ * Copyright (C) 2018-2021 Jose Luis Blanco, University of Almeria
  * See LICENSE for license information.
  * ------------------------------------------------------------------------- */
 /**
@@ -61,7 +61,7 @@ void GenericSensor::initialize(const std::string& cfg_block)
     }
 
     // Load common & sensor specific parameters:
-    const std::string cfg_params = mola::yaml2string(cfg);
+    const std::string cfg_params = mola::yaml_to_string(cfg);
 
     mrpt::config::CConfigFileMemory cfgYaml;
     cfgYaml.setContentFromYAML(cfg_params);

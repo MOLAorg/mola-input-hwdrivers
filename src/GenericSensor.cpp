@@ -19,8 +19,8 @@
 #include <mola-input-hwdrivers/GenericSensor.h>
 #include <mola-yaml/yaml_helpers.h>
 #include <mrpt/config/CConfigFileMemory.h>
-#include <mrpt/core/initializer.h>
 #include <mrpt/containers/yaml.h>
+#include <mrpt/core/initializer.h>
 
 using namespace mola;
 
@@ -33,7 +33,7 @@ MRPT_INITIALIZER(do_register_GenericSensor)
 
 GenericSensor::GenericSensor() = default;
 
-void GenericSensor::initialize(const std::string& cfg_block)
+void GenericSensor::initialize(const Yaml& c)
 {
     using namespace std::string_literals;
     using namespace mrpt::hwdrivers;
@@ -41,7 +41,6 @@ void GenericSensor::initialize(const std::string& cfg_block)
     MRPT_START ProfilerEntry tle(profiler_, "initialize");
 
     // Mandatory parameters:
-    auto c = mrpt::containers::yaml::FromText(cfg_block);
 
     ENSURE_YAML_ENTRY_EXISTS(c, "params");
     auto cfg = c["params"];
